@@ -38,20 +38,20 @@ public class MenuInformes {
 		JButton btnListadoPacientes = new JButton();
 		btnListadoPacientes.setBounds(170, 140, 250, 35);
 		btnListadoPacientes.setText("Listado de Pacientes P/ Médico");
-		// Acción del botón Ingreso datos del paciente
+		// Acción del botón Listado de pacientes por médico
 		btnListadoPacientes.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				menuInformes.dispose();
+				new InformePacienteMedico();
 			}
 		});
 		
 		JButton btnEnfermedadesAtieneMedico = new JButton();
 		btnEnfermedadesAtieneMedico.setBounds(170, 200, 250, 35);
 		btnEnfermedadesAtieneMedico.setText("Enfermedades que Atiende C/ Médico");
-		// Acción del botón ingreso situación del paciente
+		// Acción del botón Enfermedades que atiende cada médico
 		btnEnfermedadesAtieneMedico.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				menuInformes.dispose();
+				new InformeEnfermedadesAtiendeMedico();
 			}
 		});
 		
