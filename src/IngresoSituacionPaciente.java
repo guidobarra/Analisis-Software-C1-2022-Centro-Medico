@@ -32,24 +32,24 @@ public class IngresoSituacionPaciente {
 		panel.setBackground(new Color(32, 64, 81));
 		
 		// Definimos componentes
-		JLabel titulo = new JLabel("Registro: Situaci髇 del Paciente");
+		JLabel titulo = new JLabel("Registro: Situaci贸n del Paciente");
 		titulo.setBounds(50, 20, 400, 50);
 		titulo.setForeground(Color.WHITE);
 		titulo.setFont(new Font("Arial", Font.BOLD, 20));
 		
-		JLabel lblCodPaciente = new JLabel("C骴igo del Paciente: ");
+		JLabel lblCodPaciente = new JLabel("C贸digo del Paciente: ");
 		JTextField textCodPaciente = new JTextField();
 		lblCodPaciente.setBounds(50, 80, 150, 20);
 		textCodPaciente.setBounds(190, 80, 300, 20);
 		lblCodPaciente.setForeground(Color.WHITE);
 		
-		JLabel lblCodMedico = new JLabel("C骴igo del M閐ico: ");
+		JLabel lblCodMedico = new JLabel("C贸digo del M茅dico: ");
 		JTextField textCodMedico = new JTextField();
 		lblCodMedico.setBounds(50, 120, 150, 20);
 		textCodMedico.setBounds(190, 120, 300, 20);
 		lblCodMedico.setForeground(Color.WHITE);
 		
-		JLabel lblDiagnostico = new JLabel("Diagnostico del M閐ico:");
+		JLabel lblDiagnostico = new JLabel("Diagnostico del M茅dico:");
 		JTextArea textDiagnostico = new JTextArea();
 		lblDiagnostico.setBounds(50, 160, 150, 20);
 		textDiagnostico.setBounds(190, 160, 300, 70);
@@ -58,7 +58,7 @@ public class IngresoSituacionPaciente {
 		JButton btnRegistrar = new JButton();
 		btnRegistrar.setText("Registrar");
 		btnRegistrar.setBounds(50, 240, 100, 20);
-		// Acci髇 del bot髇 Registrar
+		// Acci贸n del bot贸n Registrar
 		btnRegistrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String codPaciente = textCodPaciente.getText();
@@ -66,23 +66,23 @@ public class IngresoSituacionPaciente {
 				String diagnostico = textDiagnostico.getText();
 				
 				if(codPaciente.equals("")) {
-					JOptionPane.showMessageDialog(null, "C骴igo paciente sin informar", "Registro Error", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "C贸digo paciente sin informar", "Registro Error", JOptionPane.ERROR_MESSAGE);
 				}else {
 					if(codMedico.equals("")) {
-						JOptionPane.showMessageDialog(null, "C骴igo m閐ico sin informar", "Registro Error", JOptionPane.ERROR_MESSAGE);
+						JOptionPane.showMessageDialog(null, "C贸digo m茅dico sin informar", "Registro Error", JOptionPane.ERROR_MESSAGE);
 					}else {
 						if(diagnostico.equals("")) {
 							JOptionPane.showMessageDialog(null, "Diagnostico sin informar", "Registro Error", JOptionPane.ERROR_MESSAGE);
 						}else {
 							try {
 								DataOutputStream situpac = null;
-								situpac = new DataOutputStream(new FileOutputStream("situpac.txt"));
+								situpac = new DataOutputStream(new FileOutputStream("situpac.txt", true));
 								situpac.writeUTF(codPaciente);
 								situpac.writeUTF(codMedico);
 								situpac.writeUTF(diagnostico);
 								situpac.close();
 							} catch (IOException ioe) {
-								JOptionPane.showMessageDialog(null, "Error interno de la aplicaci髇.", "Registro Error", JOptionPane.ERROR_MESSAGE);
+								JOptionPane.showMessageDialog(null, "Error interno de la aplicaci贸n.", "Registro Error", JOptionPane.ERROR_MESSAGE);
 							}
 							registro.dispose();
 						}
@@ -94,7 +94,7 @@ public class IngresoSituacionPaciente {
 		JButton btnCancelar = new JButton();
 		btnCancelar.setText("Cancelar");
 		btnCancelar.setBounds(180, 240, 100, 20);
-		// Acci髇 del bot髇 Cancelar
+		// Acci贸n del bot贸n Cancelar
 		btnCancelar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				registro.dispose();
