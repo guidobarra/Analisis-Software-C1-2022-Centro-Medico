@@ -37,7 +37,7 @@ public class DatosPaciente {
 		titulo.setForeground(Color.WHITE);
 		titulo.setFont(new Font("Arial", Font.BOLD, 20));
 		
-		JLabel lblCodPaciente = new JLabel("C骴igo del Paciente: ");
+		JLabel lblCodPaciente = new JLabel("C贸digo del Paciente: ");
 		JTextField textCodPaciente = new JTextField();
 		lblCodPaciente.setBounds(50, 80, 150, 20);
 		textCodPaciente.setBounds(190, 80, 300, 20);
@@ -52,26 +52,26 @@ public class DatosPaciente {
 		JButton btnRegistrar = new JButton();
 		btnRegistrar.setText("Registrar");
 		btnRegistrar.setBounds(50, 240, 100, 20);
-		// Acci髇 del bot髇 Registrar
+		// Acci贸n del bot贸n Registrar
 		btnRegistrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String codPaciente = textCodPaciente.getText();
 				String nombrePaciente = textNombrePaciente.getText();
 				
 				if(codPaciente.equals("")) {
-					JOptionPane.showMessageDialog(null, "C骴igo paciente sin informar", "Registro Error", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "C贸digo paciente sin informar", "Registro Error", JOptionPane.ERROR_MESSAGE);
 				}else {
 					if(nombrePaciente.equals("")) {
 						JOptionPane.showMessageDialog(null, "Nombre paciente sin informar", "Registro Error", JOptionPane.ERROR_MESSAGE);
 					}else {
 						try {
 							DataOutputStream datopac = null;
-							datopac = new DataOutputStream(new FileOutputStream("datopac.txt"));
+							datopac = new DataOutputStream(new FileOutputStream("datopac.txt", true));
 							datopac.writeUTF(codPaciente);
 							datopac.writeUTF(nombrePaciente);
 							datopac.close();
 						} catch (IOException ioe) {
-							JOptionPane.showMessageDialog(null, "Error interno de la aplicaci髇.", "Registro Error", JOptionPane.ERROR_MESSAGE);
+							JOptionPane.showMessageDialog(null, "Error interno de la aplicaci贸n.", "Registro Error", JOptionPane.ERROR_MESSAGE);
 						}
 						registro.dispose();
 					}
@@ -82,7 +82,7 @@ public class DatosPaciente {
 		JButton btnCancelar = new JButton();
 		btnCancelar.setText("Cancelar");
 		btnCancelar.setBounds(180, 240, 100, 20);
-		// Acci髇 del bot髇 Cancelar
+		// Acci贸n del bot贸n Cancelar
 		btnCancelar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				registro.dispose();
