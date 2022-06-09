@@ -25,7 +25,7 @@ public class MenuInformes {
 		panel.setBackground(new Color(32, 64, 81));
 		
 		// Definimos componentes
-		JLabel lblTitulo1 = new JLabel("CENTRO MÉDICO UNLAM");
+		JLabel lblTitulo1 = new JLabel("CENTRO MEDICO UNLAM");
 		lblTitulo1.setBounds(140, 20, 400, 50);
 		lblTitulo1.setForeground(Color.WHITE);
 		lblTitulo1.setFont(new Font("Arial", Font.BOLD, 25));
@@ -37,7 +37,7 @@ public class MenuInformes {
 		
 		JButton btnListadoPacientes = new JButton();
 		btnListadoPacientes.setBounds(170, 140, 250, 35);
-		btnListadoPacientes.setText("Listado de Pacientes P/ Médico");
+		btnListadoPacientes.setText("Listado de Pacientes P/ Medico");
 		// Acción del botón Listado de pacientes por médico
 		btnListadoPacientes.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -47,7 +47,7 @@ public class MenuInformes {
 		
 		JButton btnEnfermedadesAtieneMedico = new JButton();
 		btnEnfermedadesAtieneMedico.setBounds(170, 200, 250, 35);
-		btnEnfermedadesAtieneMedico.setText("Enfermedades que Atiende C/ Médico");
+		btnEnfermedadesAtieneMedico.setText("Enfermedades que Atiende C/ Medico");
 		// Acción del botón Enfermedades que atiende cada médico
 		btnEnfermedadesAtieneMedico.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

@@ -66,7 +66,7 @@ public class Login extends JFrame {
 		contentPane.setBackground(new Color(32, 64, 81));
 		
 		// Se define titulo principal
-		JLabel textoBienvenida = new JLabel("Bienvenido al Centro Médico Unlam");
+		JLabel textoBienvenida = new JLabel("Bienvenido al Centro Medico Unlam");
 		textoBienvenida.setBounds(125, 25, 400, 50);
 		textoBienvenida.setForeground(Color.WHITE);
 		textoBienvenida.setFont(new Font("Arial", Font.BOLD, 20));

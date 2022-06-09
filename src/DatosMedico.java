@@ -31,24 +31,24 @@ public class DatosMedico {
 		panel.setBackground(new Color(32, 64, 81));
 		
 		// Definimos componentes
-		JLabel titulo = new JLabel("Registro: Datos del Médico");
+		JLabel titulo = new JLabel("Registro: Datos del Medico");
 		titulo.setBounds(50, 20, 400, 50);
 		titulo.setForeground(Color.WHITE);
 		titulo.setFont(new Font("Arial", Font.BOLD, 20));
 		
-		JLabel lblCodMedico = new JLabel("Código del Médico: ");
+		JLabel lblCodMedico = new JLabel("Codigo del Medico: ");
 		JTextField textCodMedico = new JTextField();
 		lblCodMedico.setBounds(50, 80, 150, 20);
 		textCodMedico.setBounds(190, 80, 300, 20);
 		lblCodMedico.setForeground(Color.WHITE);
 		
-		JLabel lblNombreMedico = new JLabel("Nombre del Médico: ");
+		JLabel lblNombreMedico = new JLabel("Nombre del Medico: ");
 		JTextField textNombreMedico = new JTextField();
 		lblNombreMedico.setBounds(50, 120, 150, 20);
 		textNombreMedico.setBounds(190, 120, 300, 20);
 		lblNombreMedico.setForeground(Color.WHITE);
 		
-		JLabel lblEspecialidad = new JLabel("Especialidad del Médico:");
+		JLabel lblEspecialidad = new JLabel("Especialidad del Medico:");
 		JTextField textEspecialidad = new JTextField();
 		lblEspecialidad.setBounds(50, 160, 150, 20);
 		textEspecialidad.setBounds(190, 160, 300, 20);
@@ -65,13 +65,13 @@ public class DatosMedico {
 				String especialidad = textEspecialidad.getText();
 				
 				if(codMedico.equals("")) {
-					JOptionPane.showMessageDialog(null, "Código médico sin informar", "Registro Error", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "Codigo medico sin informar", "Registro Error", JOptionPane.ERROR_MESSAGE);
 				}else {
 					if(nombreMedico.equals("")) {
-						JOptionPane.showMessageDialog(null, "Nombre del médico sin informar", "Registro Error", JOptionPane.ERROR_MESSAGE);
+						JOptionPane.showMessageDialog(null, "Nombre del medico sin informar", "Registro Error", JOptionPane.ERROR_MESSAGE);
 					}else {
 						if(especialidad.equals("")) {
-							JOptionPane.showMessageDialog(null, "Especialidad del médico sin informar", "Registro Error", JOptionPane.ERROR_MESSAGE);
+							JOptionPane.showMessageDialog(null, "Especialidad del medico sin informar", "Registro Error", JOptionPane.ERROR_MESSAGE);
 						}else {
 							try {
 								DataOutputStream datomed = null;
@@ -81,7 +81,7 @@ public class DatosMedico {
 								datomed.writeUTF(especialidad);
 								datomed.close();
 							} catch (IOException ioe) {
-								JOptionPane.showMessageDialog(null, "Error interno de la aplicación.", "Registro Error", JOptionPane.ERROR_MESSAGE);
+								JOptionPane.showMessageDialog(null, "Error interno de la aplicacion.", "Registro Error", JOptionPane.ERROR_MESSAGE);
 							}
 							registro.dispose();
 						}

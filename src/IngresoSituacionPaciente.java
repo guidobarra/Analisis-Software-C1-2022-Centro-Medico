@@ -32,24 +32,24 @@ public class IngresoSituacionPaciente {
 		panel.setBackground(new Color(32, 64, 81));
 		
 		// Definimos componentes
-		JLabel titulo = new JLabel("Registro: Situación del Paciente");
+		JLabel titulo = new JLabel("Registro: Situacion del Paciente");
 		titulo.setBounds(50, 20, 400, 50);
 		titulo.setForeground(Color.WHITE);
 		titulo.setFont(new Font("Arial", Font.BOLD, 20));
 		
-		JLabel lblCodPaciente = new JLabel("Código del Paciente: ");
+		JLabel lblCodPaciente = new JLabel("Codigo del Paciente: ");
 		JTextField textCodPaciente = new JTextField();
 		lblCodPaciente.setBounds(50, 80, 150, 20);
 		textCodPaciente.setBounds(190, 80, 300, 20);
 		lblCodPaciente.setForeground(Color.WHITE);
 		
-		JLabel lblCodMedico = new JLabel("Código del Médico: ");
+		JLabel lblCodMedico = new JLabel("Codigo del Medico: ");
 		JTextField textCodMedico = new JTextField();
 		lblCodMedico.setBounds(50, 120, 150, 20);
 		textCodMedico.setBounds(190, 120, 300, 20);
 		lblCodMedico.setForeground(Color.WHITE);
 		
-		JLabel lblDiagnostico = new JLabel("Diagnostico del Médico:");
+		JLabel lblDiagnostico = new JLabel("Diagnostico del Medico:");
 		JTextArea textDiagnostico = new JTextArea();
 		lblDiagnostico.setBounds(50, 160, 150, 20);
 		textDiagnostico.setBounds(190, 160, 300, 70);
@@ -66,10 +66,10 @@ public class IngresoSituacionPaciente {
 				String diagnostico = textDiagnostico.getText();
 				
 				if(codPaciente.equals("")) {
-					JOptionPane.showMessageDialog(null, "Código paciente sin informar", "Registro Error", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "Codigo paciente sin informar", "Registro Error", JOptionPane.ERROR_MESSAGE);
 				}else {
 					if(codMedico.equals("")) {
-						JOptionPane.showMessageDialog(null, "Código médico sin informar", "Registro Error", JOptionPane.ERROR_MESSAGE);
+						JOptionPane.showMessageDialog(null, "Codigo medico sin informar", "Registro Error", JOptionPane.ERROR_MESSAGE);
 					}else {
 						if(diagnostico.equals("")) {
 							JOptionPane.showMessageDialog(null, "Diagnostico sin informar", "Registro Error", JOptionPane.ERROR_MESSAGE);
@@ -82,7 +82,7 @@ public class IngresoSituacionPaciente {
 								situpac.writeUTF(diagnostico);
 								situpac.close();
 							} catch (IOException ioe) {
-								JOptionPane.showMessageDialog(null, "Error interno de la aplicación.", "Registro Error", JOptionPane.ERROR_MESSAGE);
+								JOptionPane.showMessageDialog(null, "Error interno de la aplicacion.", "Registro Error", JOptionPane.ERROR_MESSAGE);
 							}
 							registro.dispose();
 						}

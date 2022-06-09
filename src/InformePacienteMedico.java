@@ -35,12 +35,12 @@ public class InformePacienteMedico {
 		panel.setBackground(new Color(32, 64, 81));
 		
 		// Definimos componentes
-		JLabel titulo = new JLabel("Informes: Listado pacientes por médico");
+		JLabel titulo = new JLabel("Informes: Listado pacientes por medico");
 		titulo.setBounds(50, 20, 400, 50);
 		titulo.setForeground(Color.WHITE);
 		titulo.setFont(new Font("Arial", Font.BOLD, 20));
 		
-		JLabel lblCodMedico = new JLabel("Código Médico a Consultar: ");
+		JLabel lblCodMedico = new JLabel("Codigo Medico a Consultar: ");
 		JTextField textCodMedico = new JTextField();
 		lblCodMedico.setBounds(50, 80, 200, 20);
 		textCodMedico.setBounds(210, 80, 350, 20);
@@ -76,7 +76,7 @@ public class InformePacienteMedico {
 				textResultado.setText(texto);
 				
 				if(codtem.equals("")) {
-					JOptionPane.showMessageDialog(null, "Código Médico sin informar", "Consulta Error", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "Codigo Medico sin informar", "Consulta Error", JOptionPane.ERROR_MESSAGE);
 				}else {
 					try {
 						DataInputStream datomed = null;
@@ -143,10 +143,10 @@ public class InformePacienteMedico {
 							}
 						}
 					} catch (IOException ioe) {
-						JOptionPane.showMessageDialog(null, "Error interno de la aplicación.", "Consulta Error", JOptionPane.ERROR_MESSAGE);
+						JOptionPane.showMessageDialog(null, "Error interno de la aplicacion.", "Consulta Error", JOptionPane.ERROR_MESSAGE);
 					}
 					if(texto.equals("")) {
-						JOptionPane.showMessageDialog(null, "No hay información para mostrar", "Consulta", JOptionPane.INFORMATION_MESSAGE);
+						JOptionPane.showMessageDialog(null, "No hay informacion para mostrar", "Consulta", JOptionPane.INFORMATION_MESSAGE);
 					}else {
 						System.out.println(texto);
 					}

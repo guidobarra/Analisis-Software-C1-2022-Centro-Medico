@@ -25,12 +25,12 @@ public class MenuPrincipal {
 		panel.setBackground(new Color(32, 64, 81));
 		
 		// Definimos componentes
-		JLabel lblTitulo1 = new JLabel("CENTRO MÉDICO UNLAM");
+		JLabel lblTitulo1 = new JLabel("CENTRO MEDICO UNLAM");
 		lblTitulo1.setBounds(140, 20, 400, 50);
 		lblTitulo1.setForeground(Color.WHITE);
 		lblTitulo1.setFont(new Font("Arial", Font.BOLD, 25));
 		
-		JLabel lblTitulo2 = new JLabel("MESA DE ADMISIÓN");
+		JLabel lblTitulo2 = new JLabel("MESA DE ADMISION");
 		lblTitulo2.setBounds(195, 60, 400, 50);
 		lblTitulo2.setForeground(Color.WHITE);
 		lblTitulo2.setFont(new Font("Arial", Font.BOLD, 22));

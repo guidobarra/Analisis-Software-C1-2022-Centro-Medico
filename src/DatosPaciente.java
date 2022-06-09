@@ -37,7 +37,7 @@ public class DatosPaciente {
 		titulo.setForeground(Color.WHITE);
 		titulo.setFont(new Font("Arial", Font.BOLD, 20));
 		
-		JLabel lblCodPaciente = new JLabel("Código del Paciente: ");
+		JLabel lblCodPaciente = new JLabel("Codigo del Paciente: ");
 		JTextField textCodPaciente = new JTextField();
 		lblCodPaciente.setBounds(50, 80, 150, 20);
 		textCodPaciente.setBounds(190, 80, 300, 20);
@@ -59,7 +59,7 @@ public class DatosPaciente {
 				String nombrePaciente = textNombrePaciente.getText();
 				
 				if(codPaciente.equals("")) {
-					JOptionPane.showMessageDialog(null, "Código paciente sin informar", "Registro Error", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "Codigo paciente sin informar", "Registro Error", JOptionPane.ERROR_MESSAGE);
 				}else {
 					if(nombrePaciente.equals("")) {
 						JOptionPane.showMessageDialog(null, "Nombre paciente sin informar", "Registro Error", JOptionPane.ERROR_MESSAGE);
@@ -71,7 +71,7 @@ public class DatosPaciente {
 							datopac.writeUTF(nombrePaciente);
 							datopac.close();
 						} catch (IOException ioe) {
-							JOptionPane.showMessageDialog(null, "Error interno de la aplicación.", "Registro Error", JOptionPane.ERROR_MESSAGE);
+							JOptionPane.showMessageDialog(null, "Error interno de la aplicacion.", "Registro Error", JOptionPane.ERROR_MESSAGE);
 						}
 						registro.dispose();
 					}

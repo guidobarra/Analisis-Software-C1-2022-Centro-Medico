@@ -25,7 +25,7 @@ public class MenuIngresoDatos {
 		panel.setBackground(new Color(32, 64, 81));
 		
 		// Definimos componentes
-		JLabel lblTitulo1 = new JLabel("CENTRO MÉDICO UNLAM");
+		JLabel lblTitulo1 = new JLabel("CENTRO MEDICO UNLAM");
 		lblTitulo1.setBounds(140, 20, 400, 50);
 		lblTitulo1.setForeground(Color.WHITE);
 		lblTitulo1.setFont(new Font("Arial", Font.BOLD, 25));
@@ -47,7 +47,7 @@ public class MenuIngresoDatos {
 		
 		JButton btnSituacionPaciente = new JButton();
 		btnSituacionPaciente.setBounds(200, 200, 200, 35);
-		btnSituacionPaciente.setText("Situación del Paciente");
+		btnSituacionPaciente.setText("Situacion del Paciente");
 		// Acción del botón ingreso situación del paciente
 		btnSituacionPaciente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -57,7 +57,7 @@ public class MenuIngresoDatos {
 		
 		JButton btnDatosMedico = new JButton();
 		btnDatosMedico.setBounds(200, 260, 200, 35);
-		btnDatosMedico.setText("Datos del Médico");
+		btnDatosMedico.setText("Datos del Medico");
 		// Acción del botón Ingreso datos del médico
 		btnDatosMedico.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
