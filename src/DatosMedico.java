@@ -38,20 +38,20 @@ public class DatosMedico {
 		
 		JLabel lblCodMedico = new JLabel("Codigo del Medico: ");
 		JTextField textCodMedico = new JTextField();
-		lblCodMedico.setBounds(50, 80, 150, 20);
-		textCodMedico.setBounds(210, 80, 300, 20);
+		lblCodMedico.setBounds(70, 80, 150, 20);
+		textCodMedico.setBounds(220, 80, 300, 20);
 		lblCodMedico.setForeground(Color.WHITE);
 		
 		JLabel lblNombreMedico = new JLabel("Nombre del Medico: ");
 		JTextField textNombreMedico = new JTextField();
-		lblNombreMedico.setBounds(50, 120, 150, 20);
-		textNombreMedico.setBounds(210, 120, 300, 20);
+		lblNombreMedico.setBounds(70, 120, 150, 20);
+		textNombreMedico.setBounds(220, 120, 300, 20);
 		lblNombreMedico.setForeground(Color.WHITE);
 		
 		JLabel lblEspecialidad = new JLabel("Especialidad del Medico:");
 		JTextField textEspecialidad = new JTextField();
-		lblEspecialidad.setBounds(50, 160, 150, 20);
-		textEspecialidad.setBounds(210, 160, 300, 20);
+		lblEspecialidad.setBounds(70, 160, 150, 20);
+		textEspecialidad.setBounds(220, 160, 300, 20);
 		lblEspecialidad.setForeground(Color.WHITE);
 		
 		JButton btnRegistrar = new JButton();
