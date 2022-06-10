@@ -24,7 +24,7 @@ public class InformeEnfermedadesAtiendeMedico {
 	public InformeEnfermedadesAtiendeMedico() {
 		// Creamos Ventana
 		JFrame registro = new JFrame();
-		registro.setBounds(100, 100, 600, 360);
+		registro.setBounds(100, 100, 700, 360);
 		registro.setLocationRelativeTo(null);
 		registro.setVisible(true);
 		registro.setIconImage(Toolkit.getDefaultToolkit().getImage(Login.class.getResource("/img/img_medico.jpg")));
@@ -50,7 +50,7 @@ public class InformeEnfermedadesAtiendeMedico {
 		JLabel lblResultado = new JLabel("Resultado consulta:");
 		 textResultado = new JTextArea();
 		lblResultado.setBounds(50, 120, 150, 20);
-		textResultado.setBounds(210, 120, 350, 100);
+		textResultado.setBounds(210, 120, 500, 100);
 		lblResultado.setForeground(Color.WHITE);
 		textResultado.enable(false);
 		textResultado.setForeground(Color.WHITE);
@@ -153,11 +153,12 @@ public class InformeEnfermedadesAtiendeMedico {
 						sw1=0;
 					}
 
-					if (codm.equals(codtem) && sw1 != 0) // compara el codigo digitado
-												// con el codigo del medico de la
-												// tabla "datomed"
+					// compara el codigo digitado
+					// con el codigo del medico de la
+					// tabla "datomed"
+					if (codm.equals(codtem) && sw1 != 0) 
 					{
-						texto += "El medico " + nomm + " trata las siguientes enfermedades:" + "\n";
+						texto += "El medico " + nomm + " (COD: " + codm + ") trata las siguientes enfermedades:" + "\n";
 						textResultado.setText(texto);
 						
 						DataInputStream situpac = null;
@@ -169,12 +170,12 @@ public class InformeEnfermedadesAtiendeMedico {
 								codp = situpac.readUTF();
 								codme = situpac.readUTF();
 								enfp = situpac.readUTF();
-
-								if (codtem.equals(codme)) // compara el codigo del medico
-															// de la tabla "datomed"
-															// con el codigo del medico en la
-															// tabla "situpac"
-
+								
+								// compara el codigo del medico 
+								// de la tabla "datomed"
+								// con el codigo del medico en la
+								// tabla "situpac"
+								if (codtem.equals(codme)) 
 								{
 									texto += ">>>> " + enfp + "\n";
 									textResultado.setText(texto);
@@ -187,7 +188,7 @@ public class InformeEnfermedadesAtiendeMedico {
 				}
 			} catch (IOException ioe) {
 				// Mensaje de error por manejo de recursos
-				mensajeError("Error interno de la aplicacion.", "Consulta Error");
+				mensajeAviso("No hay datos para mostrar", "Consulta");
 			}
 			if(texto.equals("")) {
 				// Mensaje de aviso ante ausencia de datos a mostrar

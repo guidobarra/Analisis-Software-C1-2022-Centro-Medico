@@ -23,7 +23,7 @@ public class InformePacienteMedico {
 	public InformePacienteMedico() {
 		// Creamos Ventana
 		JFrame registro = new JFrame();
-		registro.setBounds(100, 100, 600, 360);
+		registro.setBounds(100, 100, 700, 360);
 		registro.setLocationRelativeTo(null);
 		registro.setVisible(true);
 		registro.setIconImage(Toolkit.getDefaultToolkit().getImage(Login.class.getResource("/img/img_medico.jpg")));
@@ -49,7 +49,7 @@ public class InformePacienteMedico {
 		JLabel lblResultado = new JLabel("Resultado consulta:");
 		JTextArea textResultado = new JTextArea();
 		lblResultado.setBounds(50, 120, 150, 20);
-		textResultado.setBounds(210, 120, 350, 100);
+		textResultado.setBounds(210, 120, 500, 100);
 		lblResultado.setForeground(Color.WHITE);
 		textResultado.enable(false);
 		textResultado.setForeground(Color.WHITE);
@@ -98,7 +98,7 @@ public class InformePacienteMedico {
 														// digitado
 							{
 								texto = textResultado.getText();
-								texto += "El medico " + nomm + " atiende a los siguientes pacientes: " + "\n";
+								texto += "El medico " + nomm + " (COD: " + codm + ") atiende a los siguientes pacientes: " + "\n";
 								DataInputStream situpac = null;
 								situpac = new DataInputStream(new FileInputStream("situpac.txt"));
 
@@ -128,7 +128,7 @@ public class InformePacienteMedico {
 																			// con el codigo del paciente de
 																			// la tabla "datopac"
 													{
-														texto += "Paciente: " + nompa + "\n";
+														texto += "Paciente: " + nompa + " (COD: " + codp + ")" + "\n";
 														textResultado.setText(texto);
 													}
 												} catch (EOFException ex) {
@@ -143,10 +143,10 @@ public class InformePacienteMedico {
 							}
 						}
 					} catch (IOException ioe) {
-						JOptionPane.showMessageDialog(null, "Error interno de la aplicacion.", "Consulta Error", JOptionPane.ERROR_MESSAGE);
+						JOptionPane.showMessageDialog(null, "No hay datos para mostrar", "Consulta", JOptionPane.INFORMATION_MESSAGE);
 					}
 					if(texto.equals("")) {
-						JOptionPane.showMessageDialog(null, "No hay informacion para mostrar", "Consulta", JOptionPane.INFORMATION_MESSAGE);
+						JOptionPane.showMessageDialog(null, "No hay datos para mostrar", "Consulta", JOptionPane.INFORMATION_MESSAGE);
 					}else {
 						System.out.println(texto);
 					}
