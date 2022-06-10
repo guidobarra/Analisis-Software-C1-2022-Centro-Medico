@@ -122,6 +122,7 @@ public class InformeEnfermedadesAtiendeMedico {
 	}
 	
 	public void listarEnfermedadesAtiendeMedico() {
+		// Se definen variables de trabajo
 		String codtem = textCodMedico.getText();
 		String codm = "";
 		String nomm = "";
@@ -185,9 +186,11 @@ public class InformeEnfermedadesAtiendeMedico {
 					}
 				}
 			} catch (IOException ioe) {
+				// Mensaje de error por manejo de recursos
 				mensajeError("Error interno de la aplicacion.", "Consulta Error");
 			}
 			if(texto.equals("")) {
+				// Mensaje de aviso ante ausencia de datos a mostrar
 				mensajeAviso("No hay datos para mostrar", "Consulta");
 			}
 		}

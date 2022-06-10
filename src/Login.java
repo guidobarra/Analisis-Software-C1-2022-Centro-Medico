@@ -46,11 +46,6 @@ public class Login extends JFrame {
 	 * Create the frame.
 	 */
 	public Login() {
-		// Se define Lista con usuarios autorizados a operar
-		
-		//Usuario usuarioDefault = new Usuario("sergio".toLowerCase(), "1234", "sergio@mail.com");
-		//usuarios.add(usuarioDefault);
-		
 		// Se setean prámetros de la ventana de Login
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Login.class.getResource("/img/img_medico.jpg")));
 		setTitle("Centro M\u00E9dico Unlam");

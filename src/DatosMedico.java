@@ -9,6 +9,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -49,10 +50,15 @@ public class DatosMedico {
 		lblNombreMedico.setForeground(Color.WHITE);
 		
 		JLabel lblEspecialidad = new JLabel("Especialidad del Medico:");
-		JTextField textEspecialidad = new JTextField();
+		//JTextField textEspecialidad = new JTextField();
 		lblEspecialidad.setBounds(70, 160, 150, 20);
-		textEspecialidad.setBounds(220, 160, 300, 20);
+		//textEspecialidad.setBounds(220, 160, 300, 20);
 		lblEspecialidad.setForeground(Color.WHITE);
+		JComboBox comboBoxEspecialidad = new JComboBox();
+		comboBoxEspecialidad.setBounds(220, 160, 300, 20);
+		comboBoxEspecialidad.addItem("Clinico");
+		comboBoxEspecialidad.addItem("Pediatria");
+		comboBoxEspecialidad.addItem("Cardiologo");
 		
 		JButton btnRegistrar = new JButton();
 		btnRegistrar.setText("Registrar");
@@ -62,7 +68,7 @@ public class DatosMedico {
 			public void actionPerformed(ActionEvent e) {
 				String codMedico = textCodMedico.getText();
 				String nombreMedico = textNombreMedico.getText();
-				String especialidad = textEspecialidad.getText();
+				String especialidad = comboBoxEspecialidad.getSelectedItem().toString();
 				
 				if(codMedico.equals("")) {
 					JOptionPane.showMessageDialog(null, "Codigo medico sin informar", "Registro Error", JOptionPane.ERROR_MESSAGE);
@@ -108,7 +114,7 @@ public class DatosMedico {
 		panel.add(lblNombreMedico);
 		panel.add(textNombreMedico);
 		panel.add(lblEspecialidad);
-		panel.add(textEspecialidad);
+		panel.add(comboBoxEspecialidad);
 		panel.add(btnRegistrar);
 		panel.add(btnCancelar);
 		registro.setContentPane(panel);
