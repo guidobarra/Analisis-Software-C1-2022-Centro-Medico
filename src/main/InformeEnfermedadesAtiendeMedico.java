@@ -40,12 +40,12 @@ public class InformeEnfermedadesAtiendeMedico {
 		panel.setBackground(new Color(32, 64, 81));
 		
 		// Definimos componentes
-		JLabel titulo = new JLabel("Informes: Enfermedades que atiende el m閐ico");
+		JLabel titulo = new JLabel("Informes: Enfermedades que atiende el m茅dico");
 		titulo.setBounds(50, 20, 400, 50);
 		titulo.setForeground(Color.WHITE);
 		titulo.setFont(new Font("Arial", Font.BOLD, 20));
 		
-		JLabel lblCodMedico = new JLabel("C骴igo M閐ico a Consultar: ");
+		JLabel lblCodMedico = new JLabel("C贸digo M茅dico a Consultar: ");
 		JTextField textCodMedico = new JTextField();
 		lblCodMedico.setBounds(50, 80, 200, 20);
 		textCodMedico.setBounds(210, 80, 350, 20);
@@ -63,7 +63,7 @@ public class InformeEnfermedadesAtiendeMedico {
 		JButton btnRegistrar = new JButton();
 		btnRegistrar.setText("Consultar");
 		btnRegistrar.setBounds(50, 240, 100, 20);
-		// Acci髇 del bot髇 Registrar
+		// Acci贸n del bot贸n Registrar
 		btnRegistrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String codtem = textCodMedico.getText();
@@ -80,7 +80,7 @@ public class InformeEnfermedadesAtiendeMedico {
 				
 				//if(codtem.equals("")) {
 				if(validarMedico(codtem)) {
-					JOptionPane.showMessageDialog(null, "C骴igo de M閐ico inv醠ido", "Consulta Error", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "Codigo de Medico invalido", "Consulta Error", JOptionPane.ERROR_MESSAGE);
 				}else {
 					try {
 						DataInputStream datomed = null;
@@ -130,10 +130,10 @@ public class InformeEnfermedadesAtiendeMedico {
 							}
 						}
 					} catch (IOException ioe) {
-						JOptionPane.showMessageDialog(null, "Error interno de la aplicaci髇.", "Consulta Error", JOptionPane.ERROR_MESSAGE);
+						JOptionPane.showMessageDialog(null, "Error interno de la aplicaci贸n.", "Consulta Error", JOptionPane.ERROR_MESSAGE);
 					}
 					if(texto.equals("")) {
-						JOptionPane.showMessageDialog(null, "No hay informaci髇 para mostrar", "Consulta", JOptionPane.INFORMATION_MESSAGE);
+						JOptionPane.showMessageDialog(null, "No hay informaci贸n para mostrar", "Consulta", JOptionPane.INFORMATION_MESSAGE);
 					}else {
 						System.out.println(texto);
 					}
@@ -144,7 +144,7 @@ public class InformeEnfermedadesAtiendeMedico {
 		JButton btnCancelar = new JButton();
 		btnCancelar.setText("Volver");
 		btnCancelar.setBounds(180, 240, 100, 20);
-		// Acci髇 del bot髇 Regresar
+		// Acci贸n del bot贸n Regresar
 		btnCancelar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				registro.dispose();
